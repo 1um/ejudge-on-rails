@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+
+ *= require 'bootstrap'
+ *= require_self
+ *= require_tree .
+ */
+#pad15{
+  padding-top: 15px;
+}
+
+.inline{
+	display: inline;
+}
+
+input.small{
+	width: 25px;
+}
+
+.block{
+  position: relative;
+  margin: 15px 0;
+  padding: 10px 19px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.block .name {
+position: absolute;
+top: -1px;
+left: -1px;
+padding: 3px 7px;
+font-size: 20px;
+background-color: #f5f5f5;
+border: 1px solid #ddd;
+-webkit-border-radius: 4px 0 4px 0;
+-moz-border-radius: 4px 0 4px 0;
+border-radius: 4px 0 4px 0;
+}
+
+#task-tabs .copy{
+  display:none;
+}
+#task-tabs .active .copy{
+  display:inherit;
+}
+
+#logins th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+#logins th .asc {
+  background-image: url(/assets/up_arrow.gif);
+}
+
+#logins th .desc {
+  background-image: url(/assets/down_arrow.gif);
+}
+
+.100px{
+  height: 100px;
+  overflow: hidden;
+}

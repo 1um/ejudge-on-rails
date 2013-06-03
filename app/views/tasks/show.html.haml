@@ -1,0 +1,11 @@
+#task-tabs.tabbable.tabs-left
+  %ul.nav.nav-tabs
+    - @tasks.each do |task|
+      - current = task.id == @task.id
+      %li{:class=>"#{ current ? 'active' : ' '}"}
+        = link_to current ? "#current" : contest_task_path(@contest,task) do
+          =task.name
+          .copy.btn.btn-mini
+            = link_to '+', create_from_contest_task_path(@contest,task)
+  #current.tab-content
+    =render @task

@@ -1,0 +1,52 @@
+%h4
+  =link_to 'II семестр',contests_path
+  = ': Задача'
+  .inline
+    = best_in_place @task, :name, :type=>'input',:inner_class=>'small',:path => contest_task_path(@contest,@task)
+  = ':'
+  .inline
+    = best_in_place @task, :title, :type=>'input',:path => contest_task_path(@contest,@task)
+  .inline
+    .switch.switch-mini
+      %input{:type=>"checkbox", :checked=>"checked"}
+.span6
+  %h6 Условие
+  = best_in_place @task,:description, :type=>'textarea',:path => contest_task_path(@contest,@task)
+  %h6 Входные данные
+  = best_in_place @task,:input_format, :type=>'textarea',:path => contest_task_path(@contest,@task)
+  %h6 Выходные данные
+  = best_in_place @task,:output_format, :type=>'textarea',:path => contest_task_path(@contest,@task)
+  %h6 Примеры
+  %table.table.table-striped.table-bordered
+    - @task.examples.each do |example|
+      %tr
+        %td
+          =example[:input]
+        %td
+          =example[:output]
+  %h6 Тесты
+  %table#tests.table.table-striped.table-bordered
+    - @tests.each do |test|
+      %tr
+        %td.span1
+          = test[0]
+        %td
+          .100px
+            = test[1]["dat"].try(:content)
+        %td
+          .100px
+            = test[1]["ans"].try(:content)
+  .btn-group
+    %a.btn.btn-success Сгенерировать ответ
+    %a.btn.btn-success Проверить решение
+  %h6 Настройки
+  %table.table.table-striped.table-bordered
+    %tr
+      %td Баллы
+      %td 100500
+    %tr
+      %td ML
+      %td= @task.ml
+    %tr
+      %td TL
+      %td= @task.tl

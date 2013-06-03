@@ -1,0 +1,296 @@
+.span9
+  .row-fluid#runs
+    .span4
+      %h2 Runs
+    .span8#pad15
+      %form.navbar-search.pull-right
+        .input-append
+          = text_field nil,nil, placeholder: "search"
+          %a.btn
+            %i.icon-search
+    %table.table.table-striped
+      %tr
+        %th.span1 ID
+        %th.span1 Time
+        %th.span3 Name
+        %th.span1 Problem
+        %th.span1 Rezult
+        %th.span1 Score
+        %tH.span2 link
+      %tr
+        %td 76
+        %td 
+          %a{href: '#', 'data-toggle'=>"tooltip", 'title'=>"Tuesday 21.02"}
+            13:10
+        %td
+          = link_to 'Инокентий Валеонов', 'users/show/1'
+        %td
+          = link_to 'A',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %td
+          %span.label.label-success
+            OK(6)
+        %td
+          4
+        %td        
+          =link_to 'Инфо', "#info",'data-toggle'=>"modal"
+      %tr
+        %td 75
+        %td 
+          %a{href: '#', 'data-toggle'=>"tooltip", 'title'=>"Tuesday 21.02"}
+            13:10
+        %td
+          = link_to 'Инокентий Валеонов', 'users/show/1'
+        %td
+          = link_to 'A',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %td
+          %span.label.label-warning
+            Partial(3)
+        %td
+          4
+        %td        
+          =link_to 'Инфо', "#info",'data-toggle'=>"modal"
+      %tr
+        %td 76
+        %td 
+          %a{href: '#', 'data-toggle'=>"tooltip", 'title'=>"Tuesday 21.02"}
+            13:10
+        %td
+          = link_to 'Инокентий Валеонов', 'users/show/1'
+        %td
+          = link_to 'A',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %td
+          %span.label.label-warning
+            Partial(2)
+        %td
+          4
+        %td        
+          =link_to 'Инфо', "#info",'data-toggle'=>"modal"
+      %tr
+        %td 76
+        %td 
+          %a{href: '#', 'data-toggle'=>"tooltip", 'title'=>"Tuesday 21.02"}
+            13:10
+        %td
+          = link_to 'Антонина Перебагатько', 'users/show/1'
+        %td
+          = link_to 'Б',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи Б Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %td
+          %span.label.label-success
+            OK(2)
+        %td
+          4
+        %td        
+          =link_to 'Инфо', "#info",'data-toggle'=>"modal"
+      %tr
+        %td 76
+        %td 
+          %a{href: '#', 'data-toggle'=>"tooltip", 'title'=>"Tuesday 21.02"}
+            13:10
+        %td
+          = link_to 'Инокентий Валеонов', 'users/show/1'
+        %td
+          = link_to 'A',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %td
+          %span.label.label-success
+            OK(6)
+        %td
+          4
+        %td        
+          =link_to 'Инфо', "#info",'data-toggle'=>"modal"      
+  .span3
+    %h2#statistic Top 5
+  .pull-right
+    = link_to 'Все запуски'
+  %table.table.table-striped
+    %thead
+      %tr
+        %th.span2 Имя
+        %th 
+          = link_to '1',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %th
+          = link_to '1+',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %th
+          = link_to '2',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %th
+          = link_to '3',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %th
+          = link_to '4',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+        %th
+          = link_to '5',task_path(1), 'data-toggle'=>"tooltip", 'title'=>"Условие задачи А Условие задачи А Условие задачи А Условие задачи АУсловие задачи АУсловие задачи АУсловие задачи А  Условие задачи А"
+    - 5.times do
+      %tr
+        %td
+          =link_to 'Turist', 'users/show/1'        
+        %td
+          =link_to '+', "#info",'data-toggle'=>"modal" 
+          (10.03)
+        %td
+          =link_to '+3', "#info",'data-toggle'=>"modal" 
+          (10.03)
+        %td
+          =link_to '+', "#info",'data-toggle'=>"modal" 
+          (10.03)
+        %td
+          =link_to '+', "#info",'data-toggle'=>"modal"
+          (10.03)
+        %td
+          =link_to '+', "#info",'data-toggle'=>"modal"
+          (10.03)
+        %td
+          =link_to '+', "#info",'data-toggle'=>"modal"
+          (10.03)
+  .pull-right
+    = link_to 'Таблица результатов'
+.span3
+  %table.table.table-striped
+    %thead
+      %tr
+        %th #(10)
+        %th PB
+        %th User
+    %tbody
+      - 10.times do |i|
+        %tr
+          %td 
+            = 123+i
+          %td A
+          %td Миразаянов
+
+#info.modal.hide.fade
+  .modal-header
+    A
+    .span.label.label-success
+      76
+    = button_tag '×',:class=>'close','data-dismiss'=>"modal",'aria-hidden'=>"true"    
+  .modal-body
+    = link_to 'Инокентий Валеонов', 'users/show/1'
+    %br Отправка 22.02    
+    = link_to 'Редактирование','', 'data-toggle'=>"tooltip", 'title'=>"Болел, справка"
+    23.05
+    #info-parts.accordion
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#info-parts", "data-toggle" => "collapse", :href => "#source"}
+            Исходный код
+        #source.accordion-body.collapse
+          .accordion-inner
+            %pre.cpp{name:'code'}
+              = preserve do
+                :escaped
+                  //#pragma comment(linker, "/STACK:256000000")
+                  #include <set>
+                  #include <map>
+                  #include <list>
+                  #include <stack>
+                  #include <queue>
+                  #include <ctime>
+                  #include <math.h>
+                  #include <vector>
+                  #include <string>
+                  #include <stdio.h>
+                  #include <stdlib.h>
+                  #include <iostream>
+                  #include <string.h>
+                  #include <algorithm>
+                  #include <sstream>
+
+                  using namespace std;
+
+                  #define eprintf(...) fprintf(stderr, __VA_ARGS__)
+                  #define X first
+                  #define Y second
+                  #define pb push_back
+                  #define mp make_pair
+                  #define sqr(x) ((x)*(x))
+                  //#define foreach(e,x) for(__typeof(x.begin()) e=x.begin();e!=x.end();++e)
+
+                  const double PI = acos(-1.0);
+                  const int INF = 1000000000;
+                  const int MOD = 1000000009;
+                  const int M = INF;
+
+                  typedef long long LL;
+                  typedef unsigned long long ULL;
+                  typedef long double LD;
+                  typedef double D;
+                  typedef vector<int> vi;
+
+                  //#define ONLINE_JUDGE
+
+                  int main()
+                  {
+                      //double TIME_START = clock();  
+                  #ifndef ONLINE_JUDGE
+                     //freopen("in.txt","r",stdin);
+                     //freopen("out.txt","w",stdout);
+                  #else
+                     // freopen("INPUT.TXT","r",stdin);
+                     // freopen("OUTPUT.TXT","w",stdout);
+                  #endif
+
+                      
+                    int n,t; cin >> n >> t;
+                    vi a(n);
+                    for (int i = 0 ; i < n ; i++) cin >> a[i];
+                    sort(a.begin(), a.end());
+                    int sum = 0;
+                    int step = 0;
+                    for (int i = 0 ; i < n ; i++) {
+                      sum += a[i];
+                      
+                      if ( sum > t ) 
+                      {
+                        break;
+                      }
+                      step++;
+                    }
+                    
+
+                    cout << step;
+
+                    
+                    
+
+                      //eprintf("\n\n%.15lf\n\n",(double)(clock() - TIME_START)/CLOCKS_PER_SEC);
+                      return 0;
+                  }
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{href: '#report',"data-toggle"=>'collapse','data-parent'=>'#info-parts'}
+            Результат
+        #report.accordion-body.collapse.in
+          .accordion-inner
+            Пройдено 15 тестов
+            %br три теста TL
+            %br что-то еще на тесте 3
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{href: '#rejudge',"data-toggle"=>'collapse','data-parent'=>'#info-parts'}
+            Пересудить
+        #rejudge.accordion-body.collapse
+          .accordion-inner
+            .span3
+              .control-group
+                = label_tag 'Время'
+                = text_field '','',placeholder:"12.04.12 8:00"
+              .control-group
+                = label_tag 'Баллы'
+                = text_field '','',placeholder:"4"
+              %select
+                %option
+                  %span.label.label-succes
+                    ok
+                %option
+                  %span.label.label-important
+                    WA
+                  %span.label.label-warning
+                    COPY
+
+            .span3
+              = label_tag 'Причина'
+              = text_area '','',rows: 5
+              .btn-group
+                =link_to 'Отменить',nil,:class=>'btn'
+                =link_to 'Сохранить',nil,:class=>'btn'
+  .modal-footer
+    

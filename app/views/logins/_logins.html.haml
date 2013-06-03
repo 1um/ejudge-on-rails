@@ -1,0 +1,14 @@
+= hidden_field_tag :direction, params[:direction]
+= hidden_field_tag :sort, params[:sort]
+%table#logins.table.table-striped.table-bordered
+  %thead
+    %th= sortable 'login', "Логин"
+    %th= sortable 'email', "E-mail"
+    %th Имя
+    %th Пароль
+  - @logins.each do |login|
+    %tr
+      %td= login.login
+      %td= login.email
+      %td= login.names
+      %td= best_in_place login,:password, :type=>'input', :path => login_path(login), :html_attrs => {:maxlength => 20, :style => "width:100px" }

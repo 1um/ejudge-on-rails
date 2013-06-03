@@ -1,0 +1,44 @@
+!!! 5
+%html(lang="en")
+  %head
+    %title
+      Ejudge2
+    = stylesheet_link_tag    "application", :media => "all"
+    = csrf_meta_tags
+%body
+  #menu.navbar.navbar-inverse
+    .navbar-inner
+      %a.brand Ejudge2
+      %ul.nav
+        %li.dropdown{:class=>"#{'active' if params[:controller]=="tasks"}"}
+          = link_to 'Контесты', contests_path, :class=>'dropdown-toggle', 'data-toggle' => 'dropdown', 'data-target'=>'#',role: 'button',id: 'conddown'
+          %ul.dropdown-menu{:role=>'menu','aria-labelledby'=>"conddown"}
+            - Contest.all.each do |contest|
+              %li{:role=>"presentation"}
+                = link_to contest.name, contest_path(contest), role: "menuitem"
+        %li
+          =link_to 'Пользователи', logins_path
+      - if @contest
+        = form_for :contest, as: 'post', url: "#{EJUDGE_PATH}cgi-bin/new-master", :html => { enctype: "application/x-www-form-urlencoded", :id => "reload_ejudge"}, :remote=> true do |f|
+          %input{:name => "SID", :type => "hidden", :value => @contest.sid}
+          .span1.pull-right
+            %input.btn{:name => "action_62", :type => "submit", :value => "⟳", :class=>"#{@contest.unstaged_changes? ? 'btn-warning' : 'btn-success'}"}
+        .hide#stage
+          = form_tag stage_changes_contest_path(@contest.id)
+      / %form.navbar-search.pull-right
+      /   .input-append
+      /     = text_field nil,nil, placeholder: "search"
+      /     %a.btn.disable
+      /       %i.icon-search
+  = yield
+- if @contest
+  #ej-login.modal.hide.fade
+    = form_tag update_sid_path(@contest.id) do
+      .modal-header
+        Введите текущее SID
+      .modal-body
+        = text_field_tag 'sid'
+      .modal-footer
+        = submit_tag
+
+= javascript_include_tag "application"
