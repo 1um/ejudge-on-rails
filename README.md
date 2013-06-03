@@ -9,7 +9,7 @@ Ejudge on Rails - веб-оболочка для удобного управле
 Основные страницы - скриншоты:
 -----------------------------
 Страница редактирования задачи:
-![Task edit page](https://raw.github.com/1um/ejudge-on-rails/master/Task_edit_page.png)
+![Task edit page](https://raw.github.com/1um/ejudge-on-rails/master/tasks_edit_page.png)
 Страница редактирования пользователей:
 
 
