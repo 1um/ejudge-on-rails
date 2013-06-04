@@ -10,5 +10,5 @@
     %tr
       %td= login.login
       %td= login.email
-      %td= login.names
-      %td= best_in_place login,:password, :type=>'input', :path => login_path(login), :html_attrs => {:maxlength => 20, :style => "width:100px" }
+      %td= best_in_place login, :names, :type=>'input', :path => login_path(login), :html_attrs => {:maxlength => 20, :style => "width:100px" }
+      %td= best_in_place login,:password, :type=>'input', :path => login_path(login), :html_attrs => {:maxlength => 20, :style => "width:150px" }

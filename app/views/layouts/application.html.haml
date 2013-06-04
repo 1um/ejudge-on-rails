@@ -13,10 +13,10 @@
         %li.dropdown{:class=>"#{'active' if params[:controller]=="tasks"}"}
           = link_to 'Контесты', contests_path, :class=>'dropdown-toggle', 'data-toggle' => 'dropdown', 'data-target'=>'#',role: 'button',id: 'conddown'
           %ul.dropdown-menu{:role=>'menu','aria-labelledby'=>"conddown"}
-            - Contest.all.each do |contest|
+            - Contest.all.sort.each do |contest|
               %li{:role=>"presentation"}
                 = link_to contest.name, contest_path(contest), role: "menuitem"
-        %li
+        %li{:class=>"#{'active' if params[:controller]=="logins"}"}
           =link_to 'Пользователи', logins_path
       - if @contest
         = form_for :contest, as: 'post', url: "#{EJUDGE_PATH}cgi-bin/new-master", :html => { enctype: "application/x-www-form-urlencoded", :id => "reload_ejudge"}, :remote=> true do |f|

@@ -16,4 +16,13 @@ class Login < EjudgeDb
       scoped
     end
   end
+
+  def update_attributes( attributes )
+    names = attributes.slice(:names)
+    attributes.except!(:names)
+    if super(attributes)&&names
+      users.each{|u| u.update_attribute(:username,names[:names])}
+    end
+
+  end
 end
